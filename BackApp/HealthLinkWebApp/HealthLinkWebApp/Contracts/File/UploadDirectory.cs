@@ -2,13 +2,12 @@
 {
     public enum UploadDirectory
     {
-        Book = 1,
+        Proudct = 1,
         Slider = 2,
-        Plant = 4,
-        PaymentBenefits = 8,
-        Reward = 16,
-        FeedBack = 32,
-        Blog = 64,
+        PaymentBenefits = 4,
+        Reward = 8,
+        FeedBack = 16,
+        Blog = 32,
 
     }
 }

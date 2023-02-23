@@ -92,15 +92,15 @@
                 </div><!--end topbar-left-->
                 <!--end logo-->
                 <div class="menu-body navbar-vertical tab-content" data-simplebar>
-                    <div id="MetricaDashboard" class="main-icon-menu-pane tab-pane" role="tabpanel"
-                        aria-labelledby="dasboard-tab">
+                    @*<div id="MetricaDashboard" class="main-icon-menu-pane tab-pane" role="tabpanel"
+                        aria-labelledby="dasboard-tab">*@
                         <div class="title-box">
                             <h6 class="menu-title">Dashboard</h6>
                         </div>
 
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" asp-route="index" >Analytics</a>
+                                <a class="nav-link" asp-route="analyticts-index" >Analytics</a>
                             </li><!--end nav-item-->
                             <li class="nav-item">
                                 <a class="nav-link" href="crypto-index.html">Crypto</a>
@@ -1048,10 +1048,17 @@
         <!-- Top Bar End -->
 
         <div class="page-wrapper">
+             <div class="page-content-tab">
 
+                <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
             <!-- Page Content-->
             @RenderBody()
             <!-- end page content -->
+        </div>
+        </div>
+        </div>
         </div>
         <!-- end page-wrapper -->
 

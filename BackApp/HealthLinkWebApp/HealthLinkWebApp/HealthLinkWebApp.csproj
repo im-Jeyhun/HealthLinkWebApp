@@ -8,13 +8,9 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\ViewComponents\" />
-    <Folder Include="Areas\Admin\ViewModels\" />
-    <Folder Include="Areas\Client\Views\" />
     <Folder Include="Areas\Client\ViewModels\" />
-    <Folder Include="Areas\Client\Controllers\" />
     <Folder Include="Areas\Client\ViewComponents\" />
     <Folder Include="Contracts\Order\" />
-    <Folder Include="Database\Configurations\" />
     <Folder Include="Database\Models\Enums\" />
   </ItemGroup>
 

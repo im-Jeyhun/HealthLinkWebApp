@@ -1,4 +1,6 @@
-﻿using HealthLinkWebApp.Extensions;
+﻿using HealthLinkWebApp.Database.Models;
+using HealthLinkWebApp.Database.Models.Common;
+using HealthLinkWebApp.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace HealthLinkWebApp.Database
@@ -10,6 +12,9 @@ namespace HealthLinkWebApp.Database
         {
 
         }
+
+        public DbSet<Navbar> Navbars { get; set; }
+        public DbSet<SubNavbar> SubNavbars { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -45,28 +50,28 @@ namespace HealthLinkWebApp.Database
 
         private void AutoAudit()
         {
-                //foreach (var entity in ChangeTracker.Entries())
-                //{
-                //    if (entity.Entity is not IAuditable auditable) // burada is not un diger bir ozelliyinden istifade edirik
-                //                                                   //yeni entity IAuditabli implement eleyibse ve casting ede bilirse onu IAuditabledan casting edir
-                //    {
-                //        continue;
-                //    }
-                //    /* var auditable = (IAuditable)entity;*/ // casting for acces IAuditable properties on entity
+            foreach (var entity in ChangeTracker.Entries())
+            {
+                if (entity.Entity is not IAuditable auditable) // burada is not un diger bir ozelliyinden istifade edirik
+                                                               //yeni entity IAuditabli implement eleyibse ve casting ede bilirse onu IAuditabledan casting edir
+                {
+                    continue;
+                }
+                /* var auditable = (IAuditable)entity;*/ // casting for acces IAuditable properties on entity
 
-                //    DateTime currentTime = DateTime.Now; //for same time 
+                DateTime currentTime = DateTime.Now; //for same time 
 
-                //    if (entity.State == EntityState.Added) // for checking entity's state added
-                //    {
-                //        auditable.CreatedAt = currentTime;
-                //        auditable.UpdatedAt = currentTime;
-                //    }
-                //    else if (entity.State == EntityState.Modified) // for checking entity's state modified
-                //    {
-                //        auditable.UpdatedAt = currentTime;
+                if (entity.State == EntityState.Added) // for checking entity's state added
+                {
+                    auditable.CreatedAt = currentTime;
+                    auditable.UpdatedAt = currentTime;
+                }
+                else if (entity.State == EntityState.Modified) // for checking entity's state modified
+                {
+                    auditable.UpdatedAt = currentTime;
 
-                //    }
-                //}
+                }
+            }
         }
     }
 }

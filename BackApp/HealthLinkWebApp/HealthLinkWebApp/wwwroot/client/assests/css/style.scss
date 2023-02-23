@@ -2094,7 +2094,9 @@ img {
     }
   }
   .chat-room {
-    min-height: 300px;
+    max-height: 300px;
+    overflow-x:auto;
+    overflow-y:hidden;
     background-color: #f7f9fb;
     padding: 15px;
     .avatar-small {

@@ -6,7 +6,7 @@ namespace HealthLinkWebApp.Areas.Admin.Controllers
     [Route("admin/analyticts")]
     public class AnalytictsController : Controller
     {
-        [HttpGet("index")]
+        [HttpGet("index",Name = "analyticts-index")]
         public IActionResult Index()
         {
             return View();
