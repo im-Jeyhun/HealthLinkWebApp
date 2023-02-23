@@ -1,0 +1,149 @@
+.abroad-area {
+  overflow: hidden;
+  padding: 100px 0;
+}
+.abroad-area form {
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0px 1px 10px 0px rgba(29, 29, 29, 0.11);
+}
+.abroad-area form .form-information p {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #282828;
+  margin-top: 0px;
+}
+.abroad-area form .form-information .contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.abroad-area form .form-information .contact-us span {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #7b7b7b;
+}
+.abroad-area form .drug-name {
+  margin: 20px 0;
+}
+.abroad-area form .drug-name label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #282828;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.abroad-area form .drug-name input {
+  width: 100%;
+  background: #f4f8fb;
+  border: 1px solid #ebebeb;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: block;
+  outline: none;
+}
+.abroad-area form .drug-type {
+  padding: 5px 0;
+  border-bottom: 1px solid #565656;
+}
+.abroad-area form .drug-type p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #282828;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.abroad-area form .drug-type label, .abroad-area form .drug-type input {
+  margin-right: 5px;
+}
+.abroad-area form .drug-type .dt-area {
+  display: flex;
+  align-items: center;
+}
+.abroad-area form .drug-personality {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+  border-bottom: 1px solid #565656;
+}
+.abroad-area form .drug-personality p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #282828;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.abroad-area form .drug-personality .dp-area {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+.abroad-area form .drug-personality .dp-area label {
+  margin-right: 10px;
+}
+.abroad-area form .drug-size {
+  padding: 10px 0;
+}
+.abroad-area form .drug-size p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #282828;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.abroad-area form .drug-size input {
+  width: 100%;
+  background: #f4f8fb;
+  border: 1px solid #ebebeb;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: block;
+  outline: none;
+}
+.abroad-area form .by-resept p {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #282828;
+  margin-top: 0px;
+}
+.abroad-area form .by-resept .obp {
+  margin-bottom: 20px;
+}
+.abroad-area form .by-resept input {
+  margin-bottom: 20px;
+}
+.abroad-area form button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #50b1f9;
+  border: none;
+  color: white;
+  transition: 0.5s;
+}
+.abroad-area form button:hover {
+  transition: 0.5s;
+  color: white;
+  background-color: #007bff;
+}
+
+body {
+  overflow-x: hidden;
+}/*# sourceMappingURL=order-abroad.css.map */

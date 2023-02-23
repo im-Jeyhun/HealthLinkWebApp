@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="/assests/css/bootstrap.css">
+    <link rel="stylesheet" href="/assests/css/style.css">
+    <link rel="stylesheet" href="/assests/css/shop-detail.css">
+    <!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <div id="preloader">
+        <img src="/assests/images/preloader.gif" alt="">
+    </div>
+
+    <div class="header-top">
+        <div class="container">
+            <div class="row header-t-body">
+
+                <div class="col-lg-4">
+
+                    <ul class="nav-bar">
+                        <li class="up-menu">
+                            <a href="">Home</a>
+                        </li>
+                        <li class="up-menu"><a href="">PAGES</a>
+                            <ul class="drop-menuu">
+                                <li><a href="">About</a></li>
+                            </ul>
+                        </li>
+        
+                        <li class="up-menu">
+                            <a href="">Shop</a>
+                            <ul class="drop-menuu">
+                                <li><a href="">Shop by resept</a></li>
+                                <li><a href="">SHop from abroad</a></li>
+                            </ul>
+                        </li>
+                      
+                        <li class="up-menu"><a href="">BLOG</a></li>
+                        <li class="up-menu"><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="h-left col-lg-4 col-6">
+                    <div class="logo-area">
+
+                        <a href=""><img src="/assests/images/healthlink-logo.jpeg" alt="sas"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 h-t-right col-6">
+                   
+                    <ul class="h-right">
+                        <li class="header-search">
+                            <form action="#">
+                                <button><i class="fas fa-search"></i></button>
+                                <input type="text" placeholder="Search pharamcy">
+                            </form>
+                        </li>
+                        <li class="hamburger-menu">
+                            <a href="" class="hamburger-btn"><i class="fa-solid fa-bars"></i></a>
+
+                            <div class="mobile-menu">
+                                <nav class="menu-box">
+                                    <div class="nav-logo"><a href="index-2.html"><img src="/assests/images/logo.png" alt="" title=""></a>
+                                    <div class="close-mobile-btn"><i class="fas fa-times"></i></div>
+                                    </div>
+                                    <ul class="mobile-icons">
+                                        <li class="mobile-user d-md-block">
+                                            <a href="contact.html" class="user-icon" ><i class="far fa-user"></i> <i class="fas fa-angle-down drop-i"></i></a>
+                                          
+                                        </li>
+                                        <li class="mo-sbilehop-cart d-md-flex">
+                                            <a href="#">
+                                                <i class="fa-solid fa-cart-shopping" ></i>
+                                                <span class="cart-count">0</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                       <div class="auth-area-mobil">
+                                        <a href="">Login</a>
+                                        <a href="">Register</a>
+
+                                    </div>
+                                        <ul class="menu-nav">
+                                            <li><a href="">Home </a></li>
+                                            <li><a href="">Shop</a>
+                                                 <div class="mobil-drop-down"><span><i class="fas fa-angle-down"></i></span></div> 
+                                                </li>
+                                                <ul class="mobil-drop-menu">
+                                                   <li><a href="">Order</a></li>
+                                                   <li><a href="">Order by resept</a></li>
+                                                   <li><a href="">Order from abroad</a></li>
+                                                </ul>
+                                            <li><a href="">Contact</a>
+                                                <div class="mobil-drop-down"><span><i class="fas fa-angle-down"></i></span></div> 
+
+                                            </li>
+                                            <ul class="mobil-drop-menu">
+                                                <li><a href="">Ship</a></li>
+                                                <li><a href="">Order by resept</a></li>
+                                                <li><a href="">Order from abroad</a></li>
+                                             </ul>
+                                            <li><a href="">About</a></li>
+                                        </ul>
+                                        <ul class="social-links">
+                                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                            <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                                            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                            <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                                        </ul>
+                                </nav>
+                            </div>
+                        </li>
+                        <li class="header-user d-none d-md-block">
+                            <a href="contact.html" class="user-icon" ><i class="far fa-user"></i></a>
+                            <div class="auth-area">
+                                <a href="">Login</a>
+                                <a href="">Register</a>
+                            </div>
+                            <!-- <a href="">Jeyhun Hajizada</a> -->
+                        </li>
+                        <li class="header-shop-cart d-none d-md-flex">
+                            <a href="#">
+                                <i class="fa-solid fa-cart-shopping" ></i>
+                                <span class="cart-count">5</span>
+                            </a>
+                            <ul class="minicart">
+                                <div class="minicart-area">
+
+                                    <li class="d-flex align-items-start">
+                                        <div class="cart-img">
+                                            <a href="#"><img src="/assests/images/cart_p01.jpg" alt=""></a>
+                                        </div>
+                                        <div class="cart-content">
+                                            <h4><a href="#">Exclusive Winter Jackets</a></h4>
+                                            <div class="cart-price">
+                                                <span class="new">$229.9</span>
+                                                <span><del>$229.9</del></span>
+                                            </div>
+                                        </div>
+                                        <div class="del-icon">
+                                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <div class="cart-img">
+                                            <a href="#"><img src="/assests/images/cart_p01.jpg" alt=""></a>
+                                        </div>
+                                        <div class="cart-content">
+                                            <h4><a href="#">Exclusive Winter Jackets</a></h4>
+                                            <div class="cart-price">
+                                                <span class="new">$229.9</span>
+                                                <span><del>$229.9</del></span>
+                                            </div>
+                                        </div>
+                                        <div class="del-icon">
+                                            <a href="#"><i class="far fa-trash-alt"></i></a>
+                                        </div>
+                                    </li>
+                                    
+                                   
+                                </div>
+                                <li>
+                                    <div class="total-price">
+                                        <span class="f-left">Total:</span>
+                                        <span class="f-right">$239.9</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkout-link">
+                                        <a href="#">Shopping Cart</a>
+                                        <a class="black-color" href="#">Checkout</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="discount-news col-lg-12 col-12">
+
+        <div class="discount-news-title">
+            <span>Our products with a 15% discount</span>
+            <a  href="">GET 15% OFF NOW</a>
+        </div>
+    </div>
+
+
+   <section class="shop-item">
+       <div class="container">
+    <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="shop-details-wrap">
+                    <div class="area-51">
+                        <div class="col-12 col-lg-6">
+                            <div class="shop-details-img-wrap">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane show active" id="item-one" role="tabpanel" aria-labelledby="item-one-tab">
+                                        <div class="shop-details-img">
+                                            <img src="/assests/images/shop_details01.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="item-two" role="tabpanel" aria-labelledby="item-two-tab">
+                                        <div class="shop-details-img">
+                                            <img src="/assests/images/shop_details02.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="item-three" role="tabpanel" aria-labelledby="item-three-tab">
+                                        <div class="shop-details-img">
+                                            <img src="/assests/images/shop_details03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shop-details-nav-wrap">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" id="item-one-tab" data-toggle="tab" href="#item-one" role="tab" aria-controls="item-one" aria-selected="true">
+                                            <img src="/assests/images/shop_nav_img01.jpg" alt=""></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="item-two-tab" data-toggle="tab" href="#item-two" role="tab" aria-controls="item-two" aria-selected="false">
+                                            <img src="/assests/images/shop_nav_img02.jpg" alt=""></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" id="item-three-tab" data-toggle="tab" href="#item-three" role="tab" aria-controls="item-three" aria-selected="false">
+                                            <img src="/assests/images/shop_nav_img03.jpg" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="shop-details-content">
+                                <span>hand sanitizer</span>
+                                <h2 class="title">Axiom Karela Juice</h2>
+                                <div class="shop-details-review">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>( 01 Review )</span>
+                                </div>
+                                <div class="shop-details-price">
+                                    <h2 class="price">$52.00</h2>
+                                    <h5 class="stock-status">- IN Stock</h5>
+                                </div>
+                                <p>Most Chemist stores sell various types of medical supplies and numerous kinds of Allopathic, Homeopathic and ayurvedic medicines. They also sell vitamins vaccines.</p>
+                                <div class="shop-details-dimension">
+                                    <span>Dimension :</span>
+                                    <ul>
+                                        <li class="active"><a href="#">Large</a></li>
+                                        <li><a href="#">Medium</a></li>
+                                        <li><a href="#">Small</a></li>
+                                    </ul>
+                                </div>
+                              
+                                <div class="shop-details-quantity">
+                                    <span>Quantity :</span>
+                                    <div class="cart-plus-minus">
+                                        <input type="text" value="1">
+                                    </div>
+                                    <a href="shop-details.html" class="cart-btn">Add to Cart +</a>
+                                </div>
+                                <div class="shop-details-bottom">
+                                    <ul>
+                                        <li class="sd-category">
+                                            <span class="title">Categories :</span>
+                                            <a href="shop.html">Hand,</a>
+                                            <a href="shop.html">Sanitizer,</a>
+                                            <a href="shop.html">Covid - 19</a>
+                                        </li>
+                                        <li class="sd-sku">
+                                            <span class="title">SKU :</span>
+                                            <a href="shop.html">H#21546</a>
+                                        </li>
+                                        <li class="sd-share">
+                                            <span class="title">Share Now :</span>
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-desc-wrap">
+                        <ul class="nav nav-tabs" id="myTabTwo" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="true">Details More</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="val-tab" data-toggle="tab" href="#val" role="tab" aria-controls="val" aria-selected="false">Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews (0)</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContentTwo">
+                            <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+                                <div class="product-desc-content">
+                                    <p>Most Chemist stores sell various types of medical supplies and numerous kinds of Allopathic, Homeopathic and ayurvedic medicines. They also sell vitamins, vaccines This is an online generator which converts normal text letters into tiny letters which you can copy and paste into facebook, twitter, instagram and other social media posts and status updates. It essentially allows you to make text smaller. The text looks so small because three special unicode alphabets are used. This is why you can copy and paste</p>
+                                    <p>Which you can copy and paste into facebook, twitter, instagram and other social media posts and status updates. It essentially allows you to make text smaller. The text looks so small because three special unicode alphabets are used. This is why you can copy and paste.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="val" role="tabpanel" aria-labelledby="val-tab">
+                                <div class="product-desc-info">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-md-5">
+                                            <div class="product-desc-img">
+                                                <img src="/assests/images/shop_details01.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-8 col-md-7">
+                                            <h5 class="small-title">100% Axiom Karela Juice</h5>
+                                            <p>Cramond Leopard & Pythong Print Anorak Jacket In Beige but also the leap into electronic typesetting, remaining lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                            <ul class="product-desc-list">
+                                                <li>65% poly, 35% rayon</li>
+                                                <li>Partially lined</li>
+                                                <li>Hidden front button closure with keyhole accents</li>
+                                                <li>Button cuff sleeves</li>
+                                                <li>Lightweight semi-sheer fabrication</li>
+                                                <li>Made in USA</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                                <div class="product-desc-review">
+                                    <div class="review-title mb-20">
+                                        <h4 class="title">Customer Reviews (0)</h4>
+                                    </div>
+                                    <div class="left-rc">
+                                        <p>No reviews yet</p>
+                                    </div>
+                                    <div class="right-rc">
+                                        <a href="#">Write a review</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="related-products-wrap shop-wrap">
+                        <h4 class="title">Related Products</h4>
+                        <div class="row related-product-active">
+                            <div class="col-lg gap-2">
+        
+                                <div class="pp-slider-item">
+                                    <div class="pp-item-img">
+                                        <a href="">
+            
+                                            <img src="/assests/images/shop_img01.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="pp-item-content">
+                                        <p class="pp-item-category">Sanitizers</p>
+                                        <div class="pp-item-title">
+                                            <a>Karela Jamun Juice</a> 
+                                        </div>
+                                        <div class="pp-item-rate">
+                                            <span class="rate-star">
+                                                3.2
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                            <span class="rate-count">349 Ratings</span>
+                                        </div>
+                                        <div class="pp-item-discount">
+                                            <span class="pp-item-old-price">OLD PRICE <del>$300</del></span>
+                                            <span class="pp-item-discount-percent">6 OFF</span>
+                                        </div>
+                                        <div class="pp-item-shop">
+                                            <span class="pp-item-price">$97.00</span>
+                                            <button class="modal-trigger">Show</button>
+                                            <a href="">ADD +</a>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg gap-2">
+        
+                                <div class="pp-slider-item">
+                                    <div class="pp-item-img">
+                                        <a href="">
+            
+                                            <img src="/assests/images/shop_img01.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="pp-item-content">
+                                        <p class="pp-item-category">Sanitizers</p>
+                                        <div class="pp-item-title">
+                                            <a>Karela Jamun Juice</a> 
+                                        </div>
+                                        <div class="pp-item-rate">
+                                            <span class="rate-star">
+                                                3.2
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                            <span class="rate-count">349 Ratings</span>
+                                        </div>
+                                        <div class="pp-item-discount">
+                                            <span class="pp-item-old-price">OLD PRICE <del>$300</del></span>
+                                            <span class="pp-item-discount-percent">6 OFF</span>
+                                        </div>
+                                        <div class="pp-item-shop">
+                                            <span class="pp-item-price">$97.00</span>
+                                            <button class="modal-trigger">Show</button>
+                                            <a href="">ADD +</a>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg gap-2">
+        
+                                <div class="pp-slider-item">
+                                    <div class="pp-item-img">
+                                        <a href="">
+            
+                                            <img src="/assests/images/shop_img01.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="pp-item-content">
+                                        <p class="pp-item-category">Sanitizers</p>
+                                        <div class="pp-item-title">
+                                            <a>Karela Jamun Juice</a> 
+                                        </div>
+                                        <div class="pp-item-rate">
+                                            <span class="rate-star">
+                                                3.2
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                            <span class="rate-count">349 Ratings</span>
+                                        </div>
+                                        <div class="pp-item-discount">
+                                            <span class="pp-item-old-price">OLD PRICE <del>$300</del></span>
+                                            <span class="pp-item-discount-percent">6 OFF</span>
+                                        </div>
+                                        <div class="pp-item-shop">
+                                            <span class="pp-item-price">$97.00</span>
+                                            <button class="modal-trigger">Show</button>
+                                            <a href="">ADD +</a>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg gap-2">
+        
+                                <div class="pp-slider-item">
+                                    <div class="pp-item-img">
+                                        <a href="">
+            
+                                            <img src="/assests/images/shop_img01.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="pp-item-content">
+                                        <p class="pp-item-category">Sanitizers</p>
+                                        <div class="pp-item-title">
+                                            <a>Karela Jamun Juice</a> 
+                                        </div>
+                                        <div class="pp-item-rate">
+                                            <span class="rate-star">
+                                                3.2
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                            <span class="rate-count">349 Ratings</span>
+                                        </div>
+                                        <div class="pp-item-discount">
+                                            <span class="pp-item-old-price">OLD PRICE <del>$300</del></span>
+                                            <span class="pp-item-discount-percent">6 OFF</span>
+                                        </div>
+                                        <div class="pp-item-shop">
+                                            <span class="pp-item-price">$97.00</span>
+                                            <button class="modal-trigger">Show</button>
+                                            <a href="">ADD +</a>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+
+
+
+
+    <section class="payment-benefit">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="payment-item">
+                        <div class="payment-icon">
+                                <img src="/assests/images/delivery.png" alt="">
+                        </div>
+                        <div class="payment-content">
+                            <h4>Home Delivery</h4>
+                            <p>Product Delivery is a customer-centric approach to defining.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="payment-item">
+                        <div class="payment-icon">
+                                <img src="/assests/images/delivery.png" alt="">
+                        </div>
+                        <div class="payment-content">
+                            <h4>Home Delivery</h4>
+                            <p>Product Delivery is a customer-centric approach to defining.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="payment-item">
+                        <div class="payment-icon">
+                                <img src="/assests/images/delivery.png" alt="">
+                        </div>
+                        <div class="payment-content">
+                            <h4>Home Delivery</h4>
+                            <p>Product Delivery is a customer-centric approach to defining.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    
+      <footer>
+          
+          <div class="footer-up">
+                <div class="container">
+                <div class="row">
+    
+                    <div class="col-lg-3">
+                        <div class="footer-item">
+    
+                            <h5>Know Us</h5>
+                            <ul>
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Contact Us</a></li>
+                                <li><a href="">Press Coverage</a></li>
+                                <li><a href="">Business Partnership</a></li>
+                                <li><a href="">Careers</a></li>
+                                <li><a href="">Sehat Ke Sathi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-item">
+    
+                            <h5>Know Us</h5>
+                            <ul>
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Contact Us</a></li>
+                                <li><a href="">Press Coverage</a></li>
+                                <li><a href="">Business Partnership</a></li>
+                                <li><a href="">Careers</a></li>
+                                <li><a href="">Sehat Ke Sathi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="footer-item">
+    
+                            <h5>Know Us</h5>
+                            <ul>
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Contact Us</a></li>
+                                <li><a href="">Press Coverage</a></li>
+                                <li><a href="">Business Partnership</a></li>
+                                <li><a href="">Careers</a></li>
+                                <li><a href="">Sehat Ke Sathi</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                  
+                    <div class="col-lg-3">
+    
+                        <div class="footer-information">
+                            <h4>Subscribe Our Newsletter</h4>
+                            <p>Get a free subscription to our health & fitness</p>
+                            <form action="#" class="newsletter-form">
+                                <input type="text" placeholder="Enter Your Email Address">
+                                <button><i class="fas fa-rocket"></i></button>
+                            </form>
+                            <div class="fw-download-btn">
+                                <a href="#"><img src="/assests/images/download_btn01.png" alt=""></a>
+                                <a href="#"><img src="/assests/images/download_btn02.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="footer-down">
+                <div class="container">
+    
+                <div class="row">
+    
+                    <div class="col-lg-6">
+                        <div class="footer-down-text">
+                            <p>Copyright © 20221 Yed. All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer-down-images">
+                            <img src="/assests/images/card.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            </div>
+        </div>
+    
+      </footer>
+    
+    
+    <!-- Modal area -->
+      
+      <div id="modal">
+          <div class="modal-content col-lg-8">
+            <div class="container">
+    
+                <span class="close">&times;</span>
+                    <div class="modal-area">
+                        <div class="row justify-content-center">
+    
+                            <div class="col-lg-5">
+                                <div class="modal-img">
+        
+                                        <a href="">
+                                            <img src="/assests/images/shop_img01.jpg" alt="">
+                                        </a>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="modal-desc">
+                                    <h4 class="modal-title">American Marigold</h4>
+                                    <div class="modal-price">
+                                        <span class="modal-old-price">$<del>23.45</del> </span>
+                                        <span><i class="fa-solid fa-minus"></i></span>
+                                        <span class="modal-new-price">$83.45 </span>
+                                    </div>
+                                    <div class="modal-rate">
+                                        <span class="modal-rate-star">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <a class="modal-rate-title" href="">
+                                            ( 1 Review )
+                                        </a>
+                                    </div>
+                                    <div class="selector-wrap size-option">
+                                        <span class="selector-title">Dimension :</span>
+                                        <select class="nice-select wide rounded-0">
+                                          <option value="medium">Medium Size & Poot</option>
+                                          <option value="large">Large Size With Poot</option>
+                                          <option value="small">Small Size With Poot</option>
+                                        </select>
+                                      </div>
+    
+                                      <div class="modal-product-content">
+                                        <p>Most Chemist stores sell various types of medical supplies and numerous kinds of Allopathic, Homeopathic and ayurvedic medicines. They also sell vitamins vaccines</p>
+                                      </div>
+                                    <div class="shop-details-quantity">
+                                        <div class="cart-plus-minus">
+                                            <input type="text" value="1">
+                                        </div>
+                                        <a href="shop-details.html" class="cart-btn">Add to Cart +</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+            </div>
+    
+          
+        </div>
+      </div>
+    
+      <!--modal area end-->
+    
+    
+      <button class="scroll-top scroll-to-target open" data-target="html">
+        <i class="fas fa-angle-up"></i>
+    </button>
+       
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+        <script src="assests/js/slider.js"></script>
+        <script src="assests/js/app.js"></script>
+        <script src="assests/js/shop-detail.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+    </html>
