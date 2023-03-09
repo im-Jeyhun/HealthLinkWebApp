@@ -4,6 +4,7 @@ using HealthLinkWebApp.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HealthLinkWebApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230226163329_Product_Basket_BasketProduct_Brand_Category_ProductSize")]
+    partial class Product_Basket_BasketProduct_Brand_Category_ProductSize
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,150 +165,6 @@ namespace HealthLinkWebApp.Migrations
                     b.ToTable("BasketProducts", (string)null);
                 });
 
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.Blog", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BlogCategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ThumbNailImgName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ThumbNailImgNameInFileSystem")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogCategoryId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Blogs", (string)null);
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.BlogCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BlogCategories");
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.BlogImage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BlogId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageNameInFileSystem")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
-
-                    b.ToTable("BlogImages", (string)null);
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.BlogTag", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BlogId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TagId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
-
-                    b.HasIndex("TagId");
-
-                    b.ToTable("BlogTags", (string)null);
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.BlogVideo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BlogId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("VideoName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("VideoNameInFileSystem")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("VideoUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
-
-                    b.ToTable("BlogVideos", (string)null);
-                });
-
             modelBuilder.Entity("HealthLinkWebApp.Database.Models.Brand", b =>
                 {
                     b.Property<int>("Id")
@@ -327,35 +186,6 @@ namespace HealthLinkWebApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Brands", (string)null);
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.Discount", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ExpireDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("Percent")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Discounts", (string)null);
                 });
 
             modelBuilder.Entity("HealthLinkWebApp.Database.Models.Navbar", b =>
@@ -410,9 +240,11 @@ namespace HealthLinkWebApp.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ImageName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageNameInFileSystem")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -447,7 +279,7 @@ namespace HealthLinkWebApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PorductCategories");
+                    b.ToTable("PorductCategory");
                 });
 
             modelBuilder.Entity("HealthLinkWebApp.Database.Models.Product", b =>
@@ -472,22 +304,8 @@ namespace HealthLinkWebApp.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("DiscountId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("DiscountPrice")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("ExpireDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("MainImageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("MainImageNameInFileSystem")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -507,9 +325,6 @@ namespace HealthLinkWebApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RemindCount")
-                        .HasColumnType("int");
-
                     b.Property<string>("Sku")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -524,8 +339,6 @@ namespace HealthLinkWebApp.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("BrandId");
-
-                    b.HasIndex("DiscountId");
 
                     b.HasIndex("PorductCategoryId");
 
@@ -729,29 +542,6 @@ namespace HealthLinkWebApp.Migrations
                     b.ToTable("SubNavbars", (string)null);
                 });
 
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.Tag", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tags", (string)null);
-                });
-
             modelBuilder.Entity("HealthLinkWebApp.Database.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -762,24 +552,29 @@ namespace HealthLinkWebApp.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ip")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsEmailConfirmed")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProfilPhotoName")
@@ -848,75 +643,11 @@ namespace HealthLinkWebApp.Migrations
                     b.Navigation("Size");
                 });
 
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.Blog", b =>
-                {
-                    b.HasOne("HealthLinkWebApp.Database.Models.BlogCategory", "BlogCategory")
-                        .WithMany("Blogs")
-                        .HasForeignKey("BlogCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HealthLinkWebApp.Database.Models.User", "User")
-                        .WithMany("Blogs")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("BlogCategory");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.BlogImage", b =>
-                {
-                    b.HasOne("HealthLinkWebApp.Database.Models.Blog", "Blog")
-                        .WithMany("BlogImages")
-                        .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Blog");
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.BlogTag", b =>
-                {
-                    b.HasOne("HealthLinkWebApp.Database.Models.Blog", "Blog")
-                        .WithMany("BlogTags")
-                        .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HealthLinkWebApp.Database.Models.Tag", "Tag")
-                        .WithMany("BlogTags")
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Blog");
-
-                    b.Navigation("Tag");
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.BlogVideo", b =>
-                {
-                    b.HasOne("HealthLinkWebApp.Database.Models.Blog", "Blog")
-                        .WithMany("BlogVideos")
-                        .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Blog");
-                });
-
             modelBuilder.Entity("HealthLinkWebApp.Database.Models.Product", b =>
                 {
                     b.HasOne("HealthLinkWebApp.Database.Models.Brand", "Brand")
                         .WithMany("Products")
                         .HasForeignKey("BrandId");
-
-                    b.HasOne("HealthLinkWebApp.Database.Models.Discount", "Discount")
-                        .WithMany("Products")
-                        .HasForeignKey("DiscountId");
 
                     b.HasOne("HealthLinkWebApp.Database.Models.PorductCategory", "PorductCategory")
                         .WithMany("Products")
@@ -925,8 +656,6 @@ namespace HealthLinkWebApp.Migrations
                         .IsRequired();
 
                     b.Navigation("Brand");
-
-                    b.Navigation("Discount");
 
                     b.Navigation("PorductCategory");
                 });
@@ -986,26 +715,7 @@ namespace HealthLinkWebApp.Migrations
                     b.Navigation("BasketProducts");
                 });
 
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.Blog", b =>
-                {
-                    b.Navigation("BlogImages");
-
-                    b.Navigation("BlogTags");
-
-                    b.Navigation("BlogVideos");
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.BlogCategory", b =>
-                {
-                    b.Navigation("Blogs");
-                });
-
             modelBuilder.Entity("HealthLinkWebApp.Database.Models.Brand", b =>
-                {
-                    b.Navigation("Products");
-                });
-
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.Discount", b =>
                 {
                     b.Navigation("Products");
                 });
@@ -1039,18 +749,11 @@ namespace HealthLinkWebApp.Migrations
                     b.Navigation("ProductSizes");
                 });
 
-            modelBuilder.Entity("HealthLinkWebApp.Database.Models.Tag", b =>
-                {
-                    b.Navigation("BlogTags");
-                });
-
             modelBuilder.Entity("HealthLinkWebApp.Database.Models.User", b =>
                 {
                     b.Navigation("ActivationTokens");
 
                     b.Navigation("Basket");
-
-                    b.Navigation("Blogs");
                 });
 #pragma warning restore 612, 618
         }

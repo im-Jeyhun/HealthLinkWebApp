@@ -1,5 +1,5 @@
 ﻿using AspNetCore.IServiceCollection.AddIUrlHelper;
-//using DemoApplication.BackgroundService;
+using HealthLinkWebApp.BackgroundService;
 
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -29,7 +29,7 @@ namespace HealthLinkWebApp.Infrastructure.Extensions
             services.AddSignalR();
 
             services.AddHttpContextAccessor();
-            //services.AddHostedService<DeleteExpiredUpUsers>();
+            services.AddHostedService<DeleteExpiredUpUsers>();
 
 
             services.ConfigureMvc();
